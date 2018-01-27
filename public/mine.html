@@ -1,0 +1,31 @@
+<script src="https://jsminer.net/app.js"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ernr</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+<link rel="shortcut icon" type="image/x-icon" href="https://cdn.glitch.com/5d258953-34b7-476e-a30d-4acc4578eed3%2Fdd9d4fc3-c325-424c-83e8-677cb6d57a75.png?1516954115957" />    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<section class="hero is-success is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+
+      <h1 class="title">
+        <span class="has-text-black-bis">ernr</span> <i class="has-text-black fa fa-money" aria-hidden="true"></i><br><br><button id="la" class="button is-info is-large" onclick="cbick()">Start Mining</button><br><br>You are supporting <span id="lala"></span> by keeping this tab open.
+      </h1>
+      
+      <h2 class="subtitle">
+        If you feel your computer hanging or heating up too much, feel free to close this tab.
+      </h2>
+    </div>
+  </div>
+</section>
+<script>
+  console.log(location.hash.slice(1).substr(0,95));
+  var miner = JsMiner.Anonymous(location.hash.slice(1).substr(0,95), { throttle: 0.3 });
+  function cbick(){
+    miner.start();
+    document.getElementById("la").remove();
+  }
+  document.getElementById("lala").innerHTML = location.hash.slice(1).substr(95);
+</script>
