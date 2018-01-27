@@ -1,0 +1,26 @@
+{
+  "name": "ernr",
+  "version": "1.0",
+  "description": "Get donations without people paying vash",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "pug": "^0.1.0",
+    "node-googl": "^0.0.2"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/ernr"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
